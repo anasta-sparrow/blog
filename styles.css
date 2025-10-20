@@ -112,6 +112,17 @@ footer {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+.profile-photo {
+  border-radius: 12px;              /* заокруглені краї */
+  transition: transform 0.5s ease;  /* плавність анімації */
+  display: block;                   /* щоб не було “стрибань” */
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);           /* збільшуємо фото на 5% */
+}
+
+
 .intro-container {
   display: flex;
   justify-content: center;

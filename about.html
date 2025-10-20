@@ -8,7 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="about.css">
+
 </head>
+
+
+
 <body>
   <header>
     <h1>Blog</h1>
@@ -22,9 +27,69 @@
   <main>
     <article>
       <h2>About me</h2>
-      <p>This is where I share some things about me</p>
+      <p>
+       Recently I decided to learn programming as an alternative to my current career path.
+      </p>
+
+      <p>
+       This idea was brewing inside of me for quite a while, but recently I was lucky enough to experience serendipity — where I learned that I learn best when I actually practice something instead of drumming theory into my head.
+      </p>
+
+      <p>
+        (I know, <strong>SHOCKER!</strong>). So here I am.
+      </p>
+
+       <p>
+        It wasn't my only inspiration though, as a lot of the inspiration (I would say even the mosr part) was from my boyfriend. He's a great full-stack developer and I was always in awe watching him do things and succeed at them. He's one of those guys that don't make excuses and just do something that they're passionate about. I might not have the same passion for programming (I know too little to be sure yet), but even if I have one yota of the dedication that my boyfriend has —  I'll be quite happy with it. 
+      </p>
     </article>
   </main>
+
+<section class="about-cards">
+  <div class="card">
+    <div class="card-image">
+      <img src="gym.jpg" alt="Gym photo" class="card-photo" />
+    </div>
+
+    <button class="card-toggle">Show more ↓</button>
+
+    <div class="card-dropdown">
+      <p>
+        Gym and everything sports-related. Volleyball, tennis, swimming - you name it!
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <img src="my-bike.jpg" alt="Motorbike photo" class="card-photo" />
+    </div>
+
+    <button class="card-toggle">Show more ↓</button>
+
+    <div class="card-dropdown">
+      <p>
+        Riding my bike is my favorite way to clear my mind — pure freedom 🏍️
+      </p>
+    </div>
+  </div>
+</section>
+
+  <script>
+  const toggles = document.querySelectorAll(".card-toggle");
+
+  toggles.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const dropdown = btn.nextElementSibling;
+      dropdown.classList.toggle("active");
+
+      btn.textContent = dropdown.classList.contains("active")
+        ? "Hide ↑"
+        : "Show more ↓";
+    });
+  });
+  </script>
+
 
   <footer>
     <p>© 2025 My blog</p>
