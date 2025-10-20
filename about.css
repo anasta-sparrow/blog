@@ -79,3 +79,16 @@ p {
   max-height: 300px; /* вистачить для короткого тексту */
   opacity: 1;
 }
+
+.nyan-cat {
+  position: fixed;
+  top: 90px;
+  left:0px;
+  z-index: 10;
+}
+
+.cat {
+  width: 100px;
+  height: auto;
+}
+
